@@ -121,8 +121,6 @@ def mobilenet_v2_base(inputs,
             neural_net = slim.conv2d(neural_net, 1280, [1, 1], scope='bottleneck')
             endpoints['bottleneck'] = neural_net
 
-    features = tf.identity(neural_net, name='features')
-    endpoints['features'] = features
 
     return neural_net, endpoints
 
