@@ -11,6 +11,12 @@ If any luck, you have some idea about this code. Please feel free to open an iss
 I'm still immature to tensorflow, there might be some error inside the bone structure.  
 Having any question, please contact me via lcycoding@gmail.com
 
+## Issues
+Per paper on arxiv, authors said that there are 19 bottleneck in the network structure.  
+But with the Table-2 given information, there are only 17 bottleneck.  
+And there are lots of parameters that I haven't looked into.  
+Training with this network may or may not spend tons of time, please verify by yourself :-)
+
 ## References
 [Mobilenet_v2 on arxiv](https://arxiv.org/pdf/1801.04381.pdf)  
 [tensorflow_github](https://github.com/tensorflow)
