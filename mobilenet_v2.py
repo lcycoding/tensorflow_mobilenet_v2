@@ -104,7 +104,7 @@ def mobilenet_v2_base(inputs,
             neural_net = tf.identity(inputs)
             neural_net = slim.conv2d(neural_net, num_outputs=32, kernel_size=[3, 3], scope='conv1', stride=2)
             endpoints['conv1_1'] = neural_net
-            neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=16, blocks=1, stride=1)
+            neural_net = pile_of_blocks(neural_net=neural_net, expand=1, output_filter=16, blocks=1, stride=1)
             endpoints['inverted_residual_block1'] = neural_net
             neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=24, blocks=2, stride=2)
             endpoints['inverted_residual_block2_3'] = neural_net
