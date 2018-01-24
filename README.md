@@ -9,7 +9,7 @@ Lastly, add mobilenet_v2.py into your models/research/slim/nets.
 ## Declaration
 If any luck, you have some idea about this code. Please feel free to open an issue or PR to me :)  
 I'm still immature to tensorflow, there might be some error inside the bone structure.  
-Having any question, please contact [here](lcycoding@gmail.com)  
+Having any question, please contact me via lcycoding@gmail.com
 
 ## References
 [Mobilenet_v2 on arxiv](https://arxiv.org/pdf/1801.04381.pdf)  
