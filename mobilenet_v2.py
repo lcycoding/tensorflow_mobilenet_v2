@@ -110,9 +110,9 @@ def mobilenet_v2_base(inputs,
             endpoints['inverted_residual_block2_3'] = neural_net
             neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=32, blocks=3, stride=2)
             endpoints['inverted_residual_block4_6'] = neural_net
-            neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=64, blocks=4, stride=2)
+            neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=64, blocks=4, stride=1)
             endpoints['inverted_residual_block7_10'] = neural_net
-            neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=96, blocks=3, stride=1)
+            neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=96, blocks=3, stride=2)
             endpoints['inverted_residual_block11_13'] = neural_net
             neural_net = pile_of_blocks(neural_net=neural_net, expand=expand, output_filter=160,blocks=3, stride=2)
             endpoints['inverted_residual_block14_16'] = neural_net
