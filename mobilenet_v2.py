@@ -65,7 +65,7 @@ def inverted_block(neural_net, input_filter, output_filter, expand, stride):
     res_block = slim.conv2d(inputs=res_block, num_outputs=input_filter * expand, kernel_size=[1, 1])
     # depthwise conv2d
     res_block = slim.separable_conv2d(inputs=res_block, num_outputs=None, kernel_size=[3, 3], stride=stride)
-    res_block = slim.conv2d(inputs=res_block, num_outputs=output_filter, kernel_size=[1, 1], activation_fn=tf.nn.relu)
+    res_block = slim.conv2d(inputs=res_block, num_outputs=output_filter, kernel_size=[1, 1], activation_fn=None)
     # stride 2 blocks
     if stride == 2:
         return res_block
