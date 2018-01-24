@@ -1,17 +1,3 @@
-# Copyright 2017 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# =============================================================================
 """MobileNet v2.
 
 MobileNet is a general architecture and can be used for multiple use cases.
@@ -36,9 +22,6 @@ import tensorflow.contrib.slim as slim
 
 # arg scope for mnetv2
 def mobilenet_v2_arg_scope(weight_decay=0.00004, is_training = True, stddev = 0.09, regularize_depthwise=False, dropout_prob=0.999):
-
-
-
     regularizer = tf.contrib.layers.l2_regularizer(weight_decay)
     weights_init = tf.truncated_normal_initializer(stddev=stddev)
     if regularize_depthwise:
