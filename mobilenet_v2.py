@@ -133,6 +133,7 @@ def mobilenet_v2(inputs,
           neural_net = slim.avg_pool2d(neural_net, [7, 7])
           # 1 x 1 x k
           logits = slim.conv2d(neural_net, num_classes, [1, 1], activation_fn=None, normalizer_fn=None, scope='features')
+          logits = slim.flatten(logits)
 
       endpoints['Logits'] = logits
 
