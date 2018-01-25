@@ -132,13 +132,7 @@ def mobilenet_v2(inputs,
       with tf.variable_scope('Logits'):
           neural_net = slim.avg_pool2d(neural_net, [7, 7])
           # 1 x 1 x k
-          neural_net = slim.conv2d(neural_net, num_classes, [1, 1], activation_fn=None, normalizer_fn=None, scope='features')
-          neural_net = slim.flatten(neural_net)
-          endpoints['features'] = neural_net
-          if not num_classes:
-              return neural_net, endpoints
-
-          logits = tf.layers.dense(neural_net, num_classes, kernel_regularizer=tf.contrib.layers.l2_regularizer(0.00004))
+          logits = slim.conv2d(neural_net, num_classes, [1, 1], activation_fn=None, normalizer_fn=None, scope='features')
 
       endpoints['Logits'] = logits
 
